@@ -1,0 +1,91 @@
+<div class="parent">
+<div class="triangle">
+  <div class="top-left"></div>
+  <div class="bottom-right"></div>
+  <div class="my-card">
+    <mat-card>
+      <mat-card-header class="card1">
+        <mat-card-content>
+          <p>
+            <strong>
+              {{ Visiting.name }}
+            </strong>
+          </p>
+        </mat-card-content>
+        <mat-card-content>
+          <p>
+            {{ Visiting.profession }}
+          </p>
+        </mat-card-content>
+        <mat-card-content class="email-row">
+          <p>
+            <mat-icon>email</mat-icon>
+            {{ Visiting.email }}
+          </p>
+        </mat-card-content>
+        <mat-card-content class="bottom">
+          <p>
+            <mat-icon>phone</mat-icon>
+            {{ Visiting.phone }}
+          </p>
+        </mat-card-content>
+
+        <mat-card-content class="top">
+          <p>
+            {{ Visiting.address }}
+          </p>
+        </mat-card-content>
+      </mat-card-header>
+    </mat-card>
+  </div>
+</div>
+
+
+
+<div class="inputs">
+  <mat-form-field class="example-form-field">
+    <mat-label>Name</mat-label>
+    <input matInput type="text" [(ngModel)]="Visiting.name" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type="text" [(ngModel)]="Visiting.email" placeholder="Email" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput [(ngModel)]="Visiting.phone" placeholder="Phone" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput [(ngModel)]="Visiting.profession" placeholder="profession" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput [(ngModel)]="Visiting.address" placeholder="address" />
+  </mat-form-field>
+</div>
+</div>
+<div style="text-align: center;">
+  <button type="button" class="printBtn" (click)="onPrint()" style="
+      background-color: deepskyblue;
+      border-radius: 5px;
+      padding: 10px 5px;
+      border: none;">
+    Download Here!
+  </button>
+</div>
+
+<!-- <div class="inputs">
+  <form class="example-form">
+    <mat-form-field appearance="fill">
+      <mat-label>Input</mat-label>
+      <input
+        matInput
+        [(ngModel)]="Visiting.name"
+        name="anything"
+        placeholder="Name"
+      />
+    </mat-form-field>
+    <br />
+  </form>
+</div> -->
